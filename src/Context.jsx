@@ -29,19 +29,6 @@ export const UserContextProvider = ({ children }) => {
     });
     return unsubscribe;
   }, []);
-
-  //   const registerUser = (email, password, name) => {
-  //     setLoading(true);
-  //     createUserWithEmailAndPassword(auth, email, password)
-  //       .then(() =>
-  //         updateProfile(auth.currentUser, {
-  //           displayName: name,
-  //         })
-  //       )
-  //       .then((res) => console.log(res))
-  //       .catch((err) => setError(err.message))
-  //       .finally(() => setLoading(false));
-  //   };
   const registerUser = async (email, password, name) => {
     try {
       const res = await createUserWithEmailAndPassword(auth, email, password)
